@@ -10,9 +10,9 @@ import javax.persistence.*
 class Student(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private val id: Long,
-    private val name: String,
-    private val birthDay: LocalDate,
-    private val createdAt: LocalDateTime,
-    private val createdBy: String
+    val id: Long,
+    val name: String,
+    val birthDay: LocalDate,
+    val createdAt: LocalDateTime,
+    val createdBy: String
 )

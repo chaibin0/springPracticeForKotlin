@@ -3,9 +3,30 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-    database: mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/spring_jpa
     username: root
     password:
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:spring_jpa;MODE=MYSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
