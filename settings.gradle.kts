@@ -1,3 +1,3 @@
 rootProject.name = "springPracticeForKotlin"
 
-include("spring-jpa")
+include("spring-jpa", "vanilla-kotlin")
